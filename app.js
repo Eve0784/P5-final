@@ -22,13 +22,13 @@ let transitionProgress = 1; // 0 a 1
 let isTransitioning = false;
 
 function preload() {
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 8; i++) { // aca 5 imagenes o 4
     svgImgs.push(loadImage(`assets/${i}.svg`));
   }
 }
 
 function setup() {
-  let canvas = createCanvas(100, 100);
+  let canvas = createCanvas(700, 700); // 100x100
   canvas.style('display', 'block');
   canvas.style('margin', '0 auto');
 
@@ -56,9 +56,9 @@ function draw() {
 
   //========================================== CAPA INFERIOR (OCULTA) ================================================ //
   bottomLayer.clear();     // Limpia la capa
-  let rowHeight = height / 8;   // Divide el canvas en 8 filas (700/8 = 87.5px cada una)
+  let rowHeight = height / 8;   // Divide el canvas en 8 filas (700/8 = 87.5px cada una) cambia a el numero de imagenes que quieres que se muestren
 
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 8; i++) { // tambien aca cambiar depende de las imagenes
     let y = i * rowHeight;   // Posición vertical de cada fila
 
   // ----------------------------------------Interpolación suave entre colores--------------------------------------//
@@ -132,7 +132,7 @@ function shuffleColors() {
   let tempPalette = [...folkColorPalette];    // Copia la paleta completa
 
   // -------------------Seleccionar 8 colores aleatorios sin repetir -----------------------------------//
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 8; i++) { // tambnien cambiar los colores dependiendo las imagenes a mostrar
     let randomIndex = floor(random(tempPalette.length)); // Índice aleatorio
     targetColors.push(tempPalette[randomIndex]);        // Añade el color
     tempPalette.splice(randomIndex, 1);                 // Elimina ese color para no repetir
