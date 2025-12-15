@@ -197,7 +197,7 @@ function setup() {
   maskLayer.pixelDensity(4);
   
   circlePos = createVector(random(width), random(height));
-  velocity = p5.Vector.random2D().mult(0.5); // Velocidad proporcional al tamaño
+  velocity = p5.Vector.random2D().mult(1); // Velocidad proporcional al tamaño
 
   // ================== NUEVO: Seleccionar imágenes aleatorias ==================
   selectRandomImages();
