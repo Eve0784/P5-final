@@ -3,8 +3,8 @@ let svgImgs = [];
 let bottomLayer;
 let maskLayer;
 let circlePos;
-let circleSize = 400;
-let circleRadius = 200;
+let circleSize = 400; // 50
+let circleRadius = 200;   // 25 en el cuadro 100x100
 let velocity;
 
 // ------------------------Paleta amplia de colores folk vibrantes---------------------------------------//
@@ -28,14 +28,14 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(700, 700);
+  let canvas = createCanvas(100, 100);
   canvas.style('display', 'block');
   canvas.style('margin', '0 auto');
 
   bottomLayer = createGraphics(width, height);
   maskLayer = createGraphics(width, height);
   circlePos = createVector(random(width), random(height));
-  velocity = p5.Vector.random2D().mult(2);
+  velocity = p5.Vector.random2D().mult(2); // por 0.5 cambia la velocidad en el cuadro 100x100
 
   //------------------------------------------ Inicializar colores----------------------------------------------------//
   shuffleColors();
@@ -145,3 +145,6 @@ function startTransition() {
   lastColorChange = millis();  // Guarda el tiempo actual
   shuffleColors();            // Genera nuevos colores objetivo
 }
+
+
+// https://openprocessing.org/sketch/2799456
