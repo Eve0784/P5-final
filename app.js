@@ -154,8 +154,8 @@ let svgImgs = [];
 let bottomLayer;
 let maskLayer;
 let circlePos;
-let circleSize = 50; // Proporcional a canvas 100x100
-let circleRadius = 25; // Radio del círculo
+let circleSize = 400; // Proporcional a canvas 100x100
+let circleRadius = 200; // Radio del círculo
 let velocity;
 
 // ------------------------Paleta amplia de colores folk vibrantes---------------------------------------//
@@ -182,7 +182,7 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(100, 100);
+  let canvas = createCanvas(800, 800);
   canvas.style('display', 'block');
   canvas.style('margin', '0 auto');
   
